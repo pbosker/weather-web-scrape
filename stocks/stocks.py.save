@@ -1,0 +1,39 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://www.marketwatch.com/investing/stock/"
+codes=["SCS", "HOG", "AAPL", "MSFT", "GOOG", "AMZN"]
+
+def get_stock_name(c):
+    result = requests.get(url + c)
+    soup = BeautifulSoup(result.text, "html.parser")
+    lists = soup.find_all('div',class_="element element--company")
+
+    for list in lists:
+        nme = list.find('h1', class_="company__name").text
+        print(nme)
+
+def get_stock_price(c):
+    result = requests.get(url + c)
+    soup = BeautifulSoup(result.text, "html.parser")
+    lists = soup.find_all('div',class_="intraday__data")
+
+    for list in lists:
+        num = list.find('h2', class_="intraday__price").text
+        print(num[3:-1])
+
+for name in codes:
+    get_stock_name(name)
+    get_stock_price(name)
+
+
+
+
+
+#f = open("/home/paul/python/weather_scrape.csv", "a+")
+#f.seek(0)
+#data = f.read(40)
+#f.write(str(outfl))
+#f.write("\n")
+#f.close()
+
