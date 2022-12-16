@@ -4,7 +4,7 @@ import datetime
 
 url = "https://www.marketwatch.com/investing/stock/"
 codes=["SCS", "HOG", "AAPL", "MSFT", "GOOG", "AMZN", "WWW", "SPTN", "TSLA", "PLUG", "ARRY", "COMP", "AMGN", "IBM", "CAT", "MMM", "XOM", "ABBV"]
-listx = ","
+#listx = ","
 
 def find_num_of_symbols():
     number_of_symbols = len(codes)
@@ -30,19 +30,19 @@ dn = datetime.datetime.now()
 outfl = str(dn) + ", "
 number_of_symbols = find_num_of_symbols()
 
-for x in range(number_of_symbols):
-    listx = listx + codes[x] + ", "
+#for x in range(number_of_symbols):
+#    listx = listx + codes[x] + ", "
 
 for name in codes:
-    long_name = get_stock_name(name)
+#    long_name = get_stock_name(name)
     price = get_stock_price(name)
-    outfl = outfl + price + ", "
+    outfl = outfl + str(price) + ", "
 
 f = open("/home/paul/python/stocks/stock_prices.csv", "a+")
 f.seek(0)
 data = f.read(40)
-f.write(str(listx))
-f.write("\n")
+#f.write(str(listx))
+#f.write("\n")
 f.write(str(outfl))
 f.write("\n")
 f.close()
