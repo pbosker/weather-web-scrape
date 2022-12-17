@@ -2,11 +2,11 @@ from tmdbv3api import Account
 from tmdbv3api import Authentication
 from tmdbv3api import TMDb, Movie
 
-USERNAME = "YOUR_USERNAME"
-PASSWORD = "YOUR_PASSWORD"
+USERNAME = "pbosker"
+PASSWORD = "5utLyTbCr42cLc@"
 
 tmdb = TMDb()
-tmdb.api_key = "YOUR_API_KEY"
+tmdb.api_key = "af9ff4b1596689f894e8c29ca58dcc61"
 
 auth = Authentication(username=USERNAME, password=PASSWORD)
 
