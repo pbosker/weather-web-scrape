@@ -6,6 +6,11 @@ outfl = ""
 have_t = "N"
 have_h = "N"
 have_p = "N"
+t = 0.00
+w = 0.00
+h = 0.00
+p = 0.00
+r = 0.00
 
 result = requests.get(url)
 soup = BeautifulSoup(result.text, "html.parser")
@@ -39,7 +44,7 @@ for list2 in lists:
             if have_p == "N":
                 p = num
                 have_p = "Y"
-outfl = str(d) + "," + str(t) + "," + str(w) + "," + str(h) + "," + str(p) + "," + str(r)
+outfl = str(d) + "," + str(t) + "," + str(w) + "," + str(h)
 
 f = open("/home/paul/python/weather_scrape.csv", "a+")
 f.seek(0)
