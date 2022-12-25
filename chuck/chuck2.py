@@ -1,5 +1,8 @@
+# This program is desinged to extract a fun fact about Chuck Norris from a website using an API call.     This fun fact is then
+# written to a post on https://paulbosker.com called "chuck-norris".    This program is scheduled to run every 15 minutes using
+# cronjob.
+
 from wordpress_xmlrpc import Client, WordPressPost
-#from wordpress_xmlrpc.methods.posts import NewPost
 from wordpress_xmlrpc.methods.posts import EditPost
 from wordpress_xmlrpc.methods import posts
 import json
@@ -8,6 +11,8 @@ import base64
 
 def edit_post(wpcontent):
 
+#   the password in the command below is usable only using an API.   In other words, this password cannot be used by a user logging
+#   onto the website in an interactive mode.
     wp = Client('https://paulbosker.com/xmlrpc.php', 'paul', 'Bd0E pWaM sImJ OXoj DrlI QwGn')
 
     post = WordPressPost()
@@ -29,7 +34,11 @@ if __name__ == '__main__':
     response1 = requests.request("GET", url_in, headers=header1)
     cn = json.loads(response1.text)
     cnd = cn["value"]
+#   wpcontent contains the content that is stored on the Chuck Norris post.   CND is the value passed from the Chuck Norris site
+#   to the post on my website.
     wpcontent = f"<p>" + cnd + "</p>"
+    wpcontent += f"<p></p>"
+    wpcontent += f"<p></p>"
+    wpcontent += f"<p>Come back again in 15 minutes for another fun fact about Mr. Norris</p>"
 
- #   print(str(wpcontent))
     edit_post(wpcontent)
