@@ -34,11 +34,10 @@ if __name__ == '__main__':
     response1 = requests.request("GET", url_in, headers=header1)
     cn = json.loads(response1.text)
     cnd = cn["value"]
-#   wpcontent contains the content that is stored on the Chuck Norris post.   CND is the value passed from the Chuck Norris site
-#   to the post on my website.
+#   CND is the value passed from the Chuck Norris site to the post on my website.
     wpcontent = f"<p>" + cnd + "</p>"
     wpcontent += f"<p></p>"
     wpcontent += f"<p></p>"
-    wpcontent += f"<p>Come back again in 15 minutes for another fun fact about Mr. Norris</p>"
+    wpcontent += f"<p>Come back again in 5 minutes for another fun fact about Mr. Norris</p>"
 
     edit_post(wpcontent)
