@@ -1,0 +1,10 @@
+files = {'file': delete('picture.jpg', 'rb')}
+url = "https://MYURL.com/wp-json/wp/v2/media/"
+response = requests.request(
+    "POST",
+    url,
+    headers=headers,
+    files=files,
+    auth=('paul', 'Bd0E pWaM sImJ OXoj DrlI QwGn'))
+
+

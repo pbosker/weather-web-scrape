@@ -1,0 +1,28 @@
+import matplotlib.pyplot as plt  #to implement plots
+import csv                       #to read and process CSV files
+
+
+dates = [] #x-axis data
+casesTemp = [] #y-axis data 1
+casesWind = [] #y-axis data 2
+casesHumi = [] #y-axis data 3
+
+#open CSV file
+with open('/home/paul/python/weather_scrape.csv') as csvDataFile:
+    csvReader = csv.reader(csvDataFile)    #file handler
+    for row in csvReader:                  #loop through file handler
+        dates.append(row[0])               #load up first column element into dates
+        casesTemp.append(row[1])            #load up second column element into cases
+        casesWind.append(row[2])
+        casesHumi.append(row[3])
+ 
+casesTempInt = list(map(int, casesTemp))          #convert string list of cases to integers for plotting
+casesWindInt = list(map(int, casesWind))
+casesHumiInt = list(map(int, casesHumi))
+plt.plot(dates,casesTempInt, color="#444444",linestyle="--",label="Temp", marker="X")      #plot the data with X as the marker for each point
+plt.plot(dates,casesWindInt , color="#5a7d9a",label="Wind", marker="+")      #plot the data with + as the marker for each point
+plt.plot(dates,casesHumiInt, color="red",label="Humidity", marker="*")     #plot the data with * as the marker for each point
+plt.title("Dorr Weather Statistics")   #give a suitable title for the plot
+plt.legend()    #displays legend on which line relates to which country
+plt.tight_layout()  #auto adjust of plot for better viewing
+plt.show()          #show the plot 

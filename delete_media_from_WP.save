@@ -1,0 +1,10 @@
+files = {'file': delete('picture.jpg', 'rb')}
+url = "https://paulbosker.com/xmlrpc.php', "
+response = requests.request(
+    "POST",
+    url,
+    headers=headers,
+    files=files,
+    auth=('paul', 'Bd0E pWaM sImJ OXoj DrlI QwGn'))
+
+
