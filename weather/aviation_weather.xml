@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:noNamespaceSchemaLocation="http://www.aviationweather.gov/static/adds/schema/metar1_2.xsd">
+  <request_index>150245479</request_index>
+  <data_source name="metars" />
+  <request type="retrieve" />
+  <errors />
+  <warnings />
+  <time_taken_ms>3</time_taken_ms>
+  <data num_results="1">
+    <METAR>
+      <raw_text>KGRR 311653Z 26008KT 10SM OVC012 02/M01 A2990 RMK AO2 SLP131 T00221011</raw_text>
+      <station_id>KGRR</station_id>
+      <observation_time>2022-12-31T16:53:00Z</observation_time>
+      <latitude>42.88</latitude>
+      <longitude>-85.52</longitude>
+      <temp_c>2.2</temp_c>
+      <dewpoint_c>-1.1</dewpoint_c>
+      <wind_dir_degrees>260</wind_dir_degrees>
+      <wind_speed_kt>8</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>29.899607</altim_in_hg>
+      <sea_level_pressure_mb>1013.1</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="1200" />
+      <flight_category>MVFR</flight_category>
+      <metar_type>METAR</metar_type>
+      <elevation_m>239.0</elevation_m>
+    </METAR>
+  </data>
+</response>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:noNamespaceSchemaLocation="http://www.aviationweather.gov/static/adds/schema/metar1_2.xsd">
+  <request_index>150368398</request_index>
+  <data_source name="metars" />
+  <request type="retrieve" />
+  <errors />
+  <warnings />
+  <time_taken_ms>4</time_taken_ms>
+  <data num_results="1">
+    <METAR>
+      <raw_text>KGRR 311653Z 26008KT 10SM OVC012 02/M01 A2990 RMK AO2 SLP131 T00221011</raw_text>
+      <station_id>KGRR</station_id>
+      <observation_time>2022-12-31T16:53:00Z</observation_time>
+      <latitude>42.88</latitude>
+      <longitude>-85.52</longitude>
+      <temp_c>2.2</temp_c>
+      <dewpoint_c>-1.1</dewpoint_c>
+      <wind_dir_degrees>260</wind_dir_degrees>
+      <wind_speed_kt>8</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>29.899607</altim_in_hg>
+      <sea_level_pressure_mb>1013.1</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="1200" />
+      <flight_category>MVFR</flight_category>
+      <metar_type>METAR</metar_type>
+      <elevation_m>239.0</elevation_m>
+    </METAR>
+  </data>
+</response>
+
+
