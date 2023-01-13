@@ -23,7 +23,7 @@ dn = datetime.datetime.now()
 outfl = str(dn) + ", "
 
 for name in row:
-    if (str(name) == '') or (str(name) == ' '):
+    if (str(name) == '') or (str(name) == ' ') or (str(name) == "datetime"):
         continue
     else:
         price = get_stock_price(name)

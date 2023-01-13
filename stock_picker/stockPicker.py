@@ -13,9 +13,15 @@ def get_top(date):
 
 ticker_df = pd.read_html("http://en.wikipedia.org/wiki/Nasdaq-100")[4]
 tickers = ticker_df = ticker_df.Ticker.to_list()
+
+# uncomment one of the two below
 df = yf.download(tickers,start='2022-01-01')['Adj Close']
+#df = yf.download(['DXCM', 'GILD', 'ROST', 'PDD', 'HON', 'AVGO', 'KLAC', 'KHC', 'BKNG', 'PCAR'],start='2022-01-01')['Adj Close']
+print(df)
 df = df.dropna(axis=1)
 mtl = (df.pct_change() +1)[1:].resample('M').prod()
+print(mtl)
 ret_12, ret_6, ret_3 = get_rolling_ret(mtl,12), get_rolling_ret(mtl,6), get_rolling_ret(mtl,3)
 top_10 = get_top('2022-12-31')
 print(top_10)
+print(ret_6)
