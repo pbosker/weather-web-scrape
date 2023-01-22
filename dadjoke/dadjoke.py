@@ -39,12 +39,9 @@ if __name__ == '__main__':
         wpcontent += f"<h4>" + cnd + "</h4>"
         wpcontent += f"<p></p>"
         wpcontent += f"<p></p>"
-        wpcontent += f"<p>Come back again in 5 minutes for another fun joke</p>"
-        wpcontent += f"<p>This program was developed as a learning experience to become more proficient at Python.  It utilizes two libraries that I wanted to learn more about.   This functionality includes:</p>"
-        wpcontent += f"<p>1) using Python to make API calls</p>"
-        wpcontent += f"<p>2) using Python to update WordPress posts"
+        wpcontent += f"<p>Come back again in 5 minutes for another fun Dad Joke</p>"
+        wpcontent += f"<p>Fun with API calls</p>"
         wpcontent += f"<p></p>"
-
         edit_post(wpcontent)
     else:
         print("Inappropriate Joke")
